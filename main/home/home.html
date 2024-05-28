@@ -1,72 +1,100 @@
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>Home</title>
-        <link rel="stylesheet" type="text/css" href="home.css">
-        <link href="utils/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
-        <script src="utils/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
-    </head>
-    <body>
-        <iframe src="../navbar/navbar.html" width="100%" height="50" frameborder="0" id="navbar"></iframe>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="home.css">
+    <link href="utils/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="utils/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            color: #ab5d5d; /* Cor vermelho sangue */
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Fonte Roboto do Google Fonts */
+        }
+    </style>
+</head>
+<body>
+    <iframe src="../navbar/navbar.html" width="100%" height="50" frameborder="0" id="navbar"></iframe>
 
-        <div class="slider">
-            <div class="slides">
-                <input type="radio" name="radio-btn" id="radio1">
-                <input type="radio" name="radio-btn" id="radio2">
-                <input type="radio" name="radio-btn" id="radio3">
-
-                <div class="slide first">
-                    <img src="../../assets/logo design.jpg" alt="logo site">
-                </div>
-
-                <div class="slide">
-                    <img src="../../assets/Quarto.jpg" alt="logo site">
-                </div>
-
-                <div class="slide">
-                    <img src="../../assets/Chicago.jpg" alt="logo site">
-                </div>
-
-                <div class="navigation-auto">
-                    <div class="auto-btn1"></div>
-                    <div class="auto-btn2"></div>
-                    <div class="auto-btn3"></div>
-                </div>
+    <!-- Carrossel de Imagens -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="path/to/your/image1.jpg" class="d-block w-100" alt="...">
             </div>
-
-            <div class="manual-navigation">
-                <label for="radio1" class="manual-btn"></label>
-                <label for="radio2" class="manual-btn"></label>
-                <label for="radio3" class="manual-btn"></label>
+            <div class="carousel-item">
+                <img src="path/to/your/image2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="path/to/your/image3.jpg" class="d-block w-100" alt="...">
             </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
 
-        <h1>Página Inicial</h1>
-        <p>Bem-vindo ao nosso site de terror!</p>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <div class="menu">
+        <input type="checkbox" id="toggle" />
+        <label id="show-menu" for="toggle">
+            <div class="btn">
+                <i class="material-icons md-36 toggleBtn menuBtn">menu</i>
+                <i class="material-icons md-36 toggleBtn closeBtn">close</i>
+            </div>
+            <div class="btn">
+                <i class="material-icons md-36">photo_camera</i>
+            </div>
+            <div class="btn">
+                <i class="material-icons md-36">photo</i>
+            </div>
+            <div class="btn">
+                <i class="material-icons md-36">music_note</i>
+            </div>
+            <div class="btn">
+                <i class="material-icons md-36">chat_bubble</i>
+            </div>
+            <div class="btn">
+                <i class="material-icons md-36">settings</i>
+            </div>
+            <div class="btn">
+                <i class="material-icons md-36">phone</i>
+            </div>
+            <div class="btn">
+                <i class="material-icons md-36">cloud</i>
+            </div>
+            <div class="btn">
+                <i class="material-icons md-36">videocam</i>
+            </div>
+        </label>
+    </div>
 
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam repudiandae at quae ipsum optio. Delectus, aut? Amet dolorum excepturi, ipsa consectetur illum maiores eum quisquam, perspiciatis deserunt dicta odit ducimus.
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, architecto quasi facere neque blanditiis voluptas. Fugiat praesentium delectus molestias maxime, itaque architecto hic, culpa labore placeat repellat, cum quia! Quaerat?
+    <!-- Jquery necessário -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
 
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam repudiandae at quae ipsum optio. Delectus, aut? Amet dolorum excepturi, ipsa consectetur illum maiores eum quisquam, perspiciatis deserunt dicta odit ducimus.
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, architecto quasi facere neque blanditiis voluptas. Fugiat praesentium delectus molestias maxime, itaque architecto hic, culpa labore placeat repellat, cum quia! Quaerat?
-
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam repudiandae at quae ipsum optio. Delectus, aut? Amet dolorum excepturi, ipsa consectetur illum maiores eum quisquam, perspiciatis deserunt dicta odit ducimus.
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, architecto quasi facere neque blanditiis voluptas. Fugiat praesentium delectus molestias maxime, itaque architecto hic, culpa labore placeat repellat, cum quia! Quaerat?
-
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam repudiandae at quae ipsum optio. Delectus, aut? Amet dolorum excepturi, ipsa consectetur illum maiores eum quisquam, perspiciatis deserunt dicta odit ducimus.
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, architecto quasi facere neque blanditiis voluptas. Fugiat praesentium delectus molestias maxime, itaque architecto hic, culpa labore placeat repellat, cum quia! Quaerat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam repudiandae at quae ipsum optio. Delectus, aut? Amet dolorum excepturi, ipsa consectetur illum maiores eum quisquam, perspiciatis deserunt dicta odit ducimus.
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, architecto quasi facere neque blanditiis voluptas. Fugiat praesentium delectus molestias maxime, itaque architecto hic, culpa labore placeat repellat, cum quia! Quaerat?
-
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam repudiandae at quae ipsum optio. Delectus, aut? Amet dolorum excepturi, ipsa consectetur illum maiores eum quisquam, perspiciatis deserunt dicta odit ducimus.
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, architecto quasi facere neque blanditiis voluptas. Fugiat praesentium delectus molestias maxime, itaque architecto hic, culpa labore placeat repellat, cum quia! Quaerat?
-
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam repudiandae at quae ipsum optio. Delectus, aut? Amet dolorum excepturi, ipsa consectetur illum maiores eum quisquam, perspiciatis deserunt dicta odit ducimus.
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, architecto quasi facere neque blanditiis voluptas. Fugiat praesentium delectus molestias maxime, itaque architecto hic, culpa labore placeat repellat, cum quia! Quaerat?
-
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam repudiandae at quae ipsum optio. Delectus, aut? Amet dolorum excepturi, ipsa consectetur illum maiores eum quisquam, perspiciatis deserunt dicta odit ducimus.
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, architecto quasi facere neque blanditiis voluptas. Fugiat praesentium delectus molestias maxime, itaque architecto hic, culpa labore placeat repellat, cum quia! Quaerat?
-        <script src="home.js"></script>
-        <iframe id="footer" src="../footer/footer.html" width="100%" height="80" frameborder="0"></iframe>
-    </body>
+    <!-- Função usada para reduzir a barra de navegação, removendo preenchimentos e adicionando fundo preto -->
+    <script>
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
+    </script>
+    <!-- partial -->
+    <script src="./script.js"></script>
+</body>
 </html>
