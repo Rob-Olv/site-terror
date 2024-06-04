@@ -1,0 +1,64 @@
+body {
+    font-family: 'Anton', sans-serif;
+    background-color: #e7e6e6;
+    color: #333;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    padding-top: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    margin-bottom: 1px;
+}
+
+.container .equipe{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.container .emails{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+
+.container .emails a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.container .redes{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
