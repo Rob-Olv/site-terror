@@ -11,7 +11,7 @@
             <a href="../home/home.html" target="_top">Home</a>
             <a href="../_historias/historias.php" target="_top">Histórias</a>
             <a href="../_lendas/lendas.php" target="_top">Lendas</a>
-            <a href="" target="_top">Sobre</a>
+            <a href="../_sobre/sobre.html" target="_top">Sobre</a>
         </div>
         <div class="login-content">
             <?php

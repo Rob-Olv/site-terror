@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-image: url(fundo.jpeg);
+    background-image: url(../../assets/fundo.jpeg);
     background-size: 1920px 1000px;
     background-repeat: no-repeat;
     font-family: 'Anton', sans-serif;

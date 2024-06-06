@@ -2,6 +2,7 @@ body {
     font-family: 'Anton', sans-serif;
     color: #333;
     margin: 0;
+    background-image: url(../../assets/fundo.jpeg);
 }
 
 #navbar {
