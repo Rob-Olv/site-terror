@@ -1,100 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="home.css">
     <link href="utils/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="utils/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
-    <style>
-        body {
-            color: #ab5d5d; /* Cor vermelho sangue */
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Fonte Roboto do Google Fonts */
-        }
-    </style>
+    <script src="utils/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js" defer></script>
 </head>
 <body>
-    <iframe src="../navbar/navbar.html" width="100%" height="50" frameborder="0" id="navbar"></iframe>
+    <!-- Navbar -->
+    <iframe src="../navbar/navbar.php" width="100%" height="50" frameborder="0" id="navbar"></iframe>
 
-    <!-- Carrossel de Imagens -->
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="path/to/your/image1.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="path/to/your/image2.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="path/to/your/image3.jpg" class="d-block w-100" alt="...">
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <div class="menu">
-        <input type="checkbox" id="toggle" />
-        <label id="show-menu" for="toggle">
-            <div class="btn">
-                <i class="material-icons md-36 toggleBtn menuBtn">menu</i>
-                <i class="material-icons md-36 toggleBtn closeBtn">close</i>
-            </div>
-            <div class="btn">
-                <i class="material-icons md-36">photo_camera</i>
-            </div>
-            <div class="btn">
-                <i class="material-icons md-36">photo</i>
-            </div>
-            <div class="btn">
-                <i class="material-icons md-36">music_note</i>
-            </div>
-            <div class="btn">
-                <i class="material-icons md-36">chat_bubble</i>
-            </div>
-            <div class="btn">
-                <i class="material-icons md-36">settings</i>
-            </div>
-            <div class="btn">
-                <i class="material-icons md-36">phone</i>
-            </div>
-            <div class="btn">
-                <i class="material-icons md-36">cloud</i>
-            </div>
-            <div class="btn">
-                <i class="material-icons md-36">videocam</i>
-            </div>
-        </label>
-    </div>
-
-    <!-- Jquery necessário -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="js/scripts.js"></script>
-
-    <!-- Função usada para reduzir a barra de navegação, removendo preenchimentos e adicionando fundo preto -->
+    <!-- Background Music -->
+    <audio id="musica" src="música/Dead Silence Theme Song - Main Theme (Piano Version).mp3" preload="auto"></audio>
+    
     <script>
-        $(window).scroll(function() {
-            if ($(document).scrollTop() > 50) {
-                $('.nav').addClass('affix');
-                console.log("OK");
-            } else {
-                $('.nav').removeClass('affix');
-            }
+        document.querySelector("html").addEventListener('click', () => {
+            document.querySelector("#musica").play();
         });
     </script>
-    <!-- partial -->
-    <script src="./script.js"></script>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <h1 class="title">Bem-vindo à Rota do Terror</h1>
+
+    
+
+        <!-- Recent Stories -->
+        <div class="historia-carousel mt-5">
+            <?php include 'get_recent_stories.php'; ?>
+        </div>
+    </div>
+
+    <!-- Image Slider -->
+    <div class="slider mt-5">
+        <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+
+            <div class="slide first">
+                <img src="img/terror.jpg" alt="Imagem de Terror">
+            </div>
+
+            <div class="slide">
+                <img src="../../assets/1.png" alt="Imagem de Terror 1">
+            </div>
+
+            <div class="slide">
+                <img src="../../assets/2.jpeg" alt="Imagem de Terror 2">
+            </div>
+
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+            </div>
+        </div>
+
+        <div class="manual-navigation">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="resumo-box">
+                <div class="resumo-content">
+                    <h2>Lendas e Histórias Arrepiantes</h2>
+                    <p>De casas mal-assombradas a florestas proibidas, descubra as lendas e histórias de terror mais arrepiantes compartilhadas por nossa comunidade. Cada relato é uma janela para o desconhecido, onde o medo se mistura com a curiosidade.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="resumo-box">
+                <div class="resumo-content">
+                    <h2>Venha explorar</h2>
+                    <p>Explore os caminhos mais assustadores da humanidade! Na Rota do Terror, mergulhamos nas lendas e histórias de terror relatadas pelos próprios usuários.</p>
+                    <p>Prepare-se para uma jornada pela escuridão, onde cada curva pode revelar um novo mistério arrepiante.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="resumo-box">
+                <div class="resumo-content">
+                    <h2>Compartilhe sua Própria História</h2>
+                    <p>Você tem sua própria história de terror para contar? Junte-se a nós e compartilhe seus encontros sobrenaturais, experiências inexplicáveis e enigmas não resolvidos. Aqui, suas histórias ganham vida e assombram os corações dos valentes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <iframe id="footer" src="../footer/footer.html" width="100%" height="80" frameborder="0"></iframe>
+
+    <script src="home.js" defer></script>
 </body>
 </html>
