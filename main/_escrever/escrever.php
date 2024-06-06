@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+<?php
+    session_start();
+    if (!isset($_SESSION['user_id'])) {
+        header("Location: ../_login/login.html");
+        exit();
+    }
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,13 +20,6 @@
     <div class="body-content">
         <div class="escrever-content">
         <?php
-            session_start();
-
-            if (!isset($_SESSION['user_id'])) {
-                header("Location: ../_login/login.html");
-                exit();
-            }
-
             if (isset($_GET['acao'])) {
                 include '../../conexao.php';
 

@@ -19,8 +19,6 @@
                 $senha_criptografada = $row["senha"];
                 
                 if (password_verify($senha, $senha_criptografada)) {
-                    echo "Login bem-sucedido!";
-    
                     session_start();
                     $_SESSION['user_id'] = $row['id'];
                     $_SESSION['email'] = $email;
