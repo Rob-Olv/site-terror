@@ -9,18 +9,19 @@
     <title>LOGIN</title>
 </head>
 <body>
-    <iframe src="../navbar/navbar.html" width="100%" height="50" frameborder="0" id="navbar"></iframe>
+    <iframe src="../navbar/navbar.php" width="100%" height="50" frameborder="0" id="navbar"></iframe>
     
     <div class="container">
     <section class="forms">
-        <form>
-            <label for="user">Usuário:</label>
-            <input type="text" name="user" id="user">
+        <form name="form_cadastro" method="post" action="login.php">
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email">
 
             <label for="senha">Senha:</label>
             <input type="password" name="senha" id="senha">
 
-            <input type="submit" value="Login">
+            <input type="hidden" name="acao" id="acao" value="login">
+            <input type="submit" value="Login" onclick="document.getElementById('acao').value='login'">
 
             <a href="registrar/registrar.html">Registra-se</a>
         </form>
